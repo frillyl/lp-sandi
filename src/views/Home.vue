@@ -282,6 +282,7 @@ onUnmounted(() => {
 .home {
   min-height: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
   /* background: linear-gradient(to bottom, var(--primary) 50%, var(--secondary) 75%, #ffffff 100%); */
 }
 
@@ -385,6 +386,7 @@ onUnmounted(() => {
   max-height: 500px;
   transform: translateX(-25%);
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .wave {
@@ -778,6 +780,7 @@ onUnmounted(() => {
     width: max-content;
     max-width: 100vw;
     overflow-x: hidden;
+    overflow-y: hidden;
     top: 100%;
     right: 0;
     background-color: var(--primary);
