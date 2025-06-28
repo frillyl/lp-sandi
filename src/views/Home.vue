@@ -110,7 +110,7 @@
             </li>
             <li data-aos="fade-up" data-aos-delay="200">
               <i class="fa-solid fa-check-circle"></i> Mengimplementasikan fitur peringkasan
-              otomatis menggunakan algoritma TextRank.
+              otomatis menggunakan Large Language Models (LLM) Mistral.
             </li>
             <li data-aos="fade-up" data-aos-delay="300">
               <i class="fa-solid fa-check-circle"></i> Menyediakan rekomendasi dokumen serupa
@@ -135,7 +135,7 @@
             </li>
             <li data-aos="fade-up" data-aos-delay="200">
               <i class="fa-solid fa-check-circle"></i> Peringkasan dokumen secara otomatis dengan
-              metode ekstraktif menggunakan algoritma TextRank.
+              metode abstraktif menggunakan Large Language Models (LLM) Mistral.
             </li>
             <li data-aos="fade-up" data-aos-delay="300">
               <i class="fa-solid fa-check-circle"></i> Rekomendasi dokumen serupa berdasarkan
@@ -193,7 +193,7 @@
             <h3><i class="fas fa-cogs"></i> Microservices</h3>
             <p>
               Microservices dibangun dengan FastAPI, mencakup layanan OCR (Tesseract), summarization
-              (TextRank/Sumy), dan recommendation (TF-IDF + Cosine Similarity dengan scikit-learn).
+              (LLM Mistral), dan recommendation (TF-IDF + Cosine Similarity dengan scikit-learn).
             </p>
           </div>
           <div class="block" data-aos="zoom-in-up" data-aos-delay="400" data-aos-duration="600">
@@ -281,6 +281,7 @@ onUnmounted(() => {
 <style scoped>
 .home {
   min-height: 100%;
+  overflow-x: hidden;
   /* background: linear-gradient(to bottom, var(--primary) 50%, var(--secondary) 75%, #ffffff 100%); */
 }
 
@@ -383,6 +384,7 @@ onUnmounted(() => {
   width: 200%;
   max-height: 500px;
   transform: translateX(-25%);
+  overflow-x: hidden;
 }
 
 .wave {
@@ -773,6 +775,9 @@ onUnmounted(() => {
 
   .nav-links {
     position: absolute;
+    width: max-content;
+    max-width: 100vw;
+    overflow-x: hidden;
     top: 100%;
     right: 0;
     background-color: var(--primary);
@@ -867,6 +872,26 @@ onUnmounted(() => {
   .goals-features-container {
     flex-direction: column;
     gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .hero-button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    align-items: flex-start;
   }
 }
 
